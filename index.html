@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Career Roadmap</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #0f172a;
+      color: white;
+    }
+
+    h1 {
+      margin-top: 30px;
+    }
+
+    .container {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 25px;
+      background: #2563eb;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1e40af;
+    }
+
+    .roadmap {
+      display: none;
+      margin-top: 30px;
+      padding: 20px;
+      background: #1e293b;
+      border-radius: 10px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚀 Choose Your Interest</h1>
+  <p>Select what you like and see your roadmap</p>
+
+  <div class="container">
+    <div class="btn" onclick="showRoadmap('editing')">🎬 Editing</div>
+    <div class="btn" onclick="showRoadmap('coding')">💻 Coding</div>
+    <div class="btn" onclick="showRoadmap('design')">🎨 Design</div>
+  </div>
+
+  <!-- Editing Roadmap -->
+  <div id="editing" class="roadmap">
+    <h2>🎬 Editing / Cinema</h2>
+    <p><b>After 10th:</b> Any stream</p>
+    <p><b>After Inter:</b> Media / Film courses OR self-learning</p>
+    <p><b>Skills:</b> Video editing, storytelling</p>
+    <p><b>Jobs:</b> Editor, YouTuber, Content Creator</p>
+  </div>
+
+  <!-- Coding Roadmap -->
+  <div id="coding" class="roadmap">
+    <h2>💻 Coding / Tech</h2>
+    <p><b>After 10th:</b> MPC</p>
+    <p><b>After Inter:</b> B.Tech CSE / BCA</p>
+    <p><b>Skills:</b> Programming, problem solving</p>
+    <p><b>Jobs:</b> Developer, Software Engineer</p>
+  </div>
+
+  <!-- Design Roadmap -->
+  <div id="design" class="roadmap">
+    <h2>🎨 Design</h2>
+    <p><b>After 10th:</b> Any stream</p>
+    <p><b>After Inter:</b> Design courses</p>
+    <p><b>Skills:</b> Creativity, UI/UX</p>
+    <p><b>Jobs:</b> Designer, Freelancer</p>
+  </div>
+
+  <script>
+    function showRoadmap(id) {
+      // hide all
+      let sections = document.querySelectorAll('.roadmap');
+      sections.forEach(sec => sec.style.display = 'none');
+
+      // show selected
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
